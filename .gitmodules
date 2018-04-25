@@ -1,0 +1,4 @@
+[submodule "nhc"]
+	path = nhc
+	url = https://github.com/mej/nhc.git
+	branch = master
