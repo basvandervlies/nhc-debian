@@ -1,0 +1,22 @@
+Source: lbnl-nhc
+Section: admin
+Priority: optional
+Maintainer: Bas van der Vlies <bas.vandervlies@surfsara.nl>
+Uploaders: Bas van der Vlies <bas.vandervliese@surfsara.nl>
+Build-Depends: debhelper (>= 8)
+Standards-Version: 3.9.5
+Homepage: https://github.com/mej/nhc
+
+Package: lbnl-nhc
+Architecture: all
+Depends: ${misc:Depends}, mcelog
+Description: LBNL Node Health Check (NHC)   
+ This package contains the Warewulf Node Health Check system.
+ .
+ SLURM (and other resource managers) allow for the execution of a
+ script to determine if a node is "healthy" or "unhealthy" and
+ potentially mark unhealthy nodes as unavailable.  The scripts
+ contained in this package provide a flexible, extensible mechanism for
+ collecting health checks to be run on your cluster and specifying
+ which checks should be run on which nodes. Based on:
+  * https://github.com/edf-hpc/warewulf-nhc

@@ -1,0 +1,56 @@
+lbnl-nhc (1.4.2-2) UNRELEASED; urgency=medium
+
+  *  Added debian environment detection patches
+
+ -- Bas van der Vlies <bas.vandervlies@surfsara.nl>  Tue, 24 Apr 2018 12:57:57 +0200
+
+lbnl-nhc (1.4.2-1) UNRELEASED; urgency=medium
+
+  * New NHC version 
+
+ -- Bas van der Vlies <bas.vandervlies@surfsara.nl>  Thu, 19 Apr 2018 13:54:44 +0200
+
+warewulf-nhc (1.4.1-5) jessie; urgency=medium
+
+  * Add patch to ignore node status booted by Slurm
+
+ -- Rémi Palancher <remi-externe.palancher@edf.fr>  Thu, 22 Jun 2017 16:31:48 +0200
+
+warewulf-nhc (1.4.1-4) jessie; urgency=medium
+
+  * Add a message when dying
+    - Update 0002-Die-instead-of-exit-when-filesystem-device-is-read-o.patch
+
+ -- Mehdi Dogguy <mehdi.dogguy@edf.fr>  Tue, 14 Mar 2017 11:20:35 +0100
+
+warewulf-nhc (1.4.1-3) jessie; urgency=medium
+
+  * Die instead of exit when filesystem/device is read-only
+    - Add 0002-Die-instead-of-exit-when-filesystem-device-is-read-o.patch
+
+ -- Mehdi Dogguy <mehdi.dogguy@edf.fr>  Tue, 14 Mar 2017 10:00:17 +0100
+
+warewulf-nhc (1.4.1-2) jessie; urgency=medium
+
+  * Change libexecdir and SYSCONFIG dir at runtime
+
+ -- Thomas HAMEL <thomas-externe.hamel@edf.fr>  Mon, 29 Feb 2016 18:17:45 +0100
+
+warewulf-nhc (1.4.1-1) wheezy; urgency=medium
+
+  * New upstream release.
+  * Add ${misc:Depends} to Depends line
+  * Mark CCN-HPC as a maintainer and others as uploaders
+  * Add myself as an uploader
+  * Remove subversion from Build-Depends
+  * Set libexecdir to /usr/lib/warewulf-nhc
+  * Set SYSCONFIGDIR to /etc/default
+    - Add 0001-Debianize-NHC.patch
+
+ -- Mehdi Dogguy <mehdi.dogguy@edf.fr>  Wed, 21 Jan 2015 11:22:45 +0100
+
+warewulf-nhc (1.4-1) wheezy; urgency=low
+
+  * Initial release
+
+ -- Antonio Russo <antonio-externe.russo@edf.fr>  Fri, 31 Oct 2014 14:58:03 +0100

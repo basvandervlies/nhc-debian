@@ -1,0 +1,4 @@
+etc/nhc/scripts
+usr/lib/nhc/
+var/run/nhc/
+var/lib/nhc/

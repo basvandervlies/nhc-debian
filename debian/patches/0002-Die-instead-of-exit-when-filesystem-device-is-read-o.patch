@@ -1,0 +1,22 @@
+From: Mehdi Dogguy <mehdi@dogguy.org>
+Date: Tue, 14 Mar 2017 09:50:01 +0100
+Subject: Die instead of exit when filesystem/device is read-only
+
+Dying gives a chance to NHC to apply appropriate actions before exiting.
+---
+ nhc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/nhc b/nhc
+index 604cde0..d2b8eb5 100755
+--- a/nhc
++++ b/nhc
+@@ -416,7 +416,7 @@ function nhcmain_redirect_output() {
+             echo "ERROR NHC:  FATAL:  Can't write $LOGFILE as $USER (uid $EUID) -- Read-only filesystem/device failure?"
+             syslog "NHC:  FATAL:  Can't write $LOGFILE as $USER (uid $EUID) -- Read-only filesystem/device failure?"
+             syslog_flush
+-            exit 1
++            die 130 "Read-only filesystem/device failure?"
+         else
+             dbg "Output redirected per LOGFILE variable $LOGFILE"
+             NHC_FD_OUT=3

@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+.PHONY: override_dh_auto_configure
+override_dh_auto_configure:
+	./configure --prefix=/usr			\
+		--sysconfdir=/etc			\
+		--localstatedir=/var			\
+		--libexecdir=/usr/lib
+
+%:
+	dh ${@} --parallel
